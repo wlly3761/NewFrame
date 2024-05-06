@@ -1,8 +1,9 @@
 using Core.Attribute;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Application.TestWebApi;
 
-[DynamicApi(ServiceLifeCycle = "Scoped")]
+[DynamicApi]
 public class TestWebApi:ITestWebApi
 {
     public string GetName()

@@ -2,9 +2,16 @@
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Core.AutoInjectService;
-
+/// <summary>
+/// 自动注入服务类
+/// </summary>
 public static class AutoInjectService
 {
+    /// <summary>
+    /// 自动注入服务
+    /// </summary>
+    /// <param name="serviceCollection"></param>
+    /// <returns></returns>
     public static IServiceCollection AutoRegistryService(this IServiceCollection serviceCollection)
     {
         var types = AssemblyHelper.GetTypesByAssembly("Application").ToArray();
@@ -29,6 +36,9 @@ public static class AutoInjectService
                         break;
                     case "Transient":
                         serviceCollection.AddTransient(serviceInterfaceType, serviceType);
+                        break;
+                    default:
+                        serviceCollection.AddScoped(serviceInterfaceType, serviceType);
                         break;
                 }
             }
