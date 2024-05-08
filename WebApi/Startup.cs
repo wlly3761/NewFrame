@@ -1,6 +1,8 @@
 using Blog.BaseConfigSerivce.DynamicAPi;
 using Core.AutoInjectService;
 using Core.Filter;
+using Core.SignalR;
+using Core.SqlSugar;
 using Core.Swagger;
 
 
@@ -8,6 +10,11 @@ namespace WebApi;
 
 public class Startup
 {
+    private readonly IConfiguration _configuration;
+    public Startup(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
     // ConfigureServices 方法用于配置应用程序的服务  
     public void ConfigureServices(IServiceCollection services)  
     {  
@@ -35,7 +42,9 @@ public class Startup
         services.AutoRegistryService();
         //注册SignalR
         services.AddSignalR();
-
+        //添加SqlSugar服务
+        services.AddSqlsugarSetup(_configuration);
+        
     }  
   
     // Configure 方法用于配置应用程序的请求处理管道  
@@ -55,5 +64,7 @@ public class Startup
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi.Core V1");
             c.RoutePrefix = "ApiDoc";
         });
+        //使用SinganR
+        app.UseEndpoints(endpoints => { endpoints.MapHub<CommunicationHub>("/communicationHub"); });
     }  
 }

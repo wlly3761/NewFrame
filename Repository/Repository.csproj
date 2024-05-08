@@ -8,6 +8,8 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+      <PackageReference Include="SqlSugarCore" Version="5.1.4.154" />
     </ItemGroup>
+
 
 </Project>
