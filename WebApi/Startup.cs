@@ -1,9 +1,14 @@
 using Blog.BaseConfigSerivce.DynamicAPi;
 using Core.AutoInjectService;
 using Core.Filter;
+using Core.Quartz;
 using Core.SignalR;
 using Core.SqlSugar;
 using Core.Swagger;
+using Core.Tools;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Spi;
 
 
 namespace WebApi;
@@ -44,11 +49,22 @@ public class Startup
         services.AddSignalR();
         //添加SqlSugar服务
         services.AddSqlsugarSetup(_configuration);
-        
+        //注入Quartz任何工厂及调度工厂
+        services.AddSingleton<IJobFactory, QuartzJobFactory>();
+        services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+        //注入调度中心
+        services.AddSingleton<SchedulerCenter>();
+        //批量注入任务调度作业类
+        Type[] types = AssemblyHelper.GetTypesByAssembly("Application")
+            .Where(c => c.GetInterfaces().Contains(typeof(IJobBase))).ToArray();
+        foreach (var serviceType in types)
+        {
+            services.AddSingleton(serviceType);
+        }
     }  
   
     // Configure 方法用于配置应用程序的请求处理管道  
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IHostApplicationLifetime applicationLifetime,IServiceProvider service)
     {
         app.UseRouting();
         app.UseEndpoints(endpoints =>  
@@ -66,5 +82,16 @@ public class Startup
         });
         //使用SinganR
         app.UseEndpoints(endpoints => { endpoints.MapHub<CommunicationHub>("/communicationHub"); });
+        //任务调度
+        //获取调度中心实例
+        var quartz = service.GetRequiredService<SchedulerCenter>();
+        applicationLifetime.ApplicationStarted.Register(() =>
+        {
+            quartz.StartScheduler(); //项目启动后启动调度中心
+        });
+        applicationLifetime.ApplicationStopped.Register(() =>
+        {
+            quartz.StopScheduler();  //项目停止后关闭调度中心
+        });
     }  
 }

@@ -1,9 +1,10 @@
+using Core.Quartz;
 using Microsoft.AspNetCore.Http;
 using Quartz;
 
-namespace Application.Test;
+namespace Application.TestJob;
 
-public class TestTrigger:IJob
+public class TestTrigger:IJobBase
 {
     private readonly IHttpContextAccessor _contextAccessor;
     public TestTrigger(IHttpContextAccessor contextAccessor)
