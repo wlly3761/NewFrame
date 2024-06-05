@@ -3,7 +3,7 @@ using System.Runtime.Loader;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyModel;
 
-namespace Core.AutoInjectService;
+namespace Core.Tools;
 
 [ApiExplorerSettings(IgnoreApi = true)]
 public class AssemblyHelper
@@ -66,4 +66,18 @@ public class AssemblyHelper
         foreach (var typeinfo in typeinfos) list.Add(typeinfo.AsType());
         return list;
     }
+    
+     /// <summary>
+     /// 获取类对象
+     /// </summary>
+     /// <param name="assembly"></param>
+     /// <param name="className"></param>
+     /// <returns></returns>
+     public static object GetClassObj(Assembly assembly, string className)
+         {
+           // 从程序集中获取指定对象类型;
+            Type type = assembly.GetType(className); 
+            Object obj = type.Assembly.CreateInstance(type.ToString());
+            return obj;
+        }
 }

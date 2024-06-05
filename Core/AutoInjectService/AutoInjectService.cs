@@ -1,4 +1,5 @@
 ﻿using Core.Attribute;
+using Core.Tools;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Core.AutoInjectService;

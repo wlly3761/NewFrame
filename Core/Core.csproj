@@ -13,6 +13,7 @@
       <PackageReference Include="SqlSugar.IOC" Version="2.0.0" />
       <PackageReference Include="SqlSugarCore" Version="5.1.4.154" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+
     </ItemGroup>
 
 

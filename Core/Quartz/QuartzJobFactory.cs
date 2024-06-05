@@ -1,3 +1,4 @@
+using Core.Tools;
 using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using Quartz.Spi;
@@ -50,4 +51,6 @@ public class QuartzJobFactory : IJobFactory
         IDisposable disposable = job as IDisposable;
         disposable?.Dispose();
     }
+
+  
 }

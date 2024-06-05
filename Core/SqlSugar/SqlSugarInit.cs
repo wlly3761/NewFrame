@@ -17,7 +17,7 @@ public static class SqlSugarInit
             var client = new SqlSugarClient(new ConnectionConfig
             {
                 ConnectionString = configuration.GetValue<string>("DBConnection"),
-                DbType = DbType.PostgreSQL,
+                DbType = DbType.MySql,
                 IsAutoCloseConnection = true,
                 ConfigId = "1"
             });
