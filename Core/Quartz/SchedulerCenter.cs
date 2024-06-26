@@ -21,10 +21,9 @@ public class SchedulerCenter
     {
         //1、从工厂获取调度程序实例
         _scheduler = await _schedulerFactory.GetScheduler();
-
+        
         // 替换默认工厂(存在构造注入的任务调度类必须使用这个，否则调度器无法识别）
         _scheduler.JobFactory = this._jobFactory;
-
         Type[] types=  AssemblyHelper.GetTypesByAssembly("Application").Where(c => c.GetInterfaces().Contains(typeof(IJobBase)))
             .ToArray();
         if(!types.Any()) return;

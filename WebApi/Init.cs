@@ -1,3 +1,5 @@
+using System.Reflection;
+using System.Runtime.Loader;
 using Blog.BaseConfigSerivce.DynamicAPi;
 using Core.AutoInjectService;
 using Core.Filter;
@@ -11,6 +13,8 @@ using NLog.Web;
 using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
+using ReZero;
+using ReZero.SuperAPI;
 
 namespace WebApi;
 
@@ -71,8 +75,7 @@ public static class Init
         builder.Services.AutoRegistryService();
         //注册SignalR
         builder.Services.AddSignalR();
-        //添加SqlSugar服务
-        builder.Services.AddSqlsugarSetup(builder.Configuration);
+       
         //注入Quartz任何工厂及调度工厂
         builder.Services.AddSingleton<IJobFactory, QuartzJobFactory>();
         builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
@@ -85,6 +88,27 @@ public static class Init
         {
             builder.Services.AddSingleton(serviceType);
         }
+        //注册ReZero.Api
+    builder.Services.AddReZeroServices(api =>
+    {
+        
+        
+        //有重载可换json文件 (断点看一下apiObj.DatabaseOptions.ConnectionConfig有没有字符串进来)
+        var apiObj = SuperAPIOptions.GetOptions("rezero.json"); 
+    
+        //IOC业务等所有需要的所有集程集 有多个dll就写多个
+        var assemblyList = new Assembly[] { Assembly.GetExecutingAssembly(),
+            AssemblyLoadContext.Default.LoadFromAssemblyName(new AssemblyName("Application"))
+             };
+    
+        apiObj!.DependencyInjectionOptions = new DependencyInjectionOptions(assemblyList);
+    
+        //启用超级API
+        api.EnableSuperApi(apiObj);
+    
+    });
+    //添加SqlSugar服务
+    builder.Services.AddSqlsugarSetup(builder.Configuration);
     }
 
     private  static void Configure(WebApplication app)

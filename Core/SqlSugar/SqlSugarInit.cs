@@ -15,21 +15,20 @@ public static class SqlSugarInit
         services.AddScoped<ISqlSugarClient>(o =>
         {
             var client = new SqlSugarClient(new ConnectionConfig
-            {
-                ConnectionString = configuration.GetValue<string>("DBConnection"),
-                DbType = DbType.MySql,
-                IsAutoCloseConnection = true,
-                ConfigId = "1"
-            });
+                {
+                    ConnectionString = configuration.GetValue<string>("DBConnection"),
+                    DbType = DbType.MySql,
+                    IsAutoCloseConnection = true,
+                    ConfigId = "1"
+                },
+                db =>
+                {
+                    db.Aop.OnLogExecuting = (sql, p) =>
+                    {
+                        Console.WriteLine(1+sql);
+                    };
+                });
             return client;
-        });
-        services.ConfigurationSugar(db =>
-        {
-            //打印sql语句
-            //db.GetConnection("1").Aop.OnLogExecuting = (sql, p) =>
-            //{
-            //    Console.WriteLine(1+sql);
-            //};
         });
     }
 }
