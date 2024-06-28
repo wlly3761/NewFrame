@@ -11,6 +11,10 @@ using Core.Swagger;
 using Core.Tools;
 using NLog;
 using NLog.Web;
+using OpenTelemetry.Logs;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
@@ -96,6 +100,25 @@ public static class Init
         // });
         //添加SqlSugar服务
         builder.Services.AddSqlsugarSetup(builder.Configuration);
+        //添加OpenTelemetry
+        const string serviceName = "roll-dice";
+        builder.Logging.AddOpenTelemetry(options =>
+        {
+            options
+                .SetResourceBuilder(
+                    ResourceBuilder.CreateDefault()
+                        .AddService(serviceName))
+                .AddConsoleExporter();
+        });
+        builder.Services.AddOpenTelemetry()
+            .ConfigureResource(resource => resource.AddService(serviceName))
+            .WithTracing(tracing => tracing
+                .AddAspNetCoreInstrumentation()
+                .AddConsoleExporter())
+            .WithMetrics(metrics => metrics
+                .AddAspNetCoreInstrumentation()
+                .AddConsoleExporter());
+        
     }
 
     private static void Configure(WebApplication app)

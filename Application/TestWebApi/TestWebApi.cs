@@ -15,6 +15,8 @@ public class TestWebApi:ITestWebApi
     }
     public string GetName()
     {
+        int totalCount =0;
+        totalCount = int.Parse("测试");
         return "测试";
     }
 }

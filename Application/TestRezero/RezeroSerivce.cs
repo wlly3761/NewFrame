@@ -16,8 +16,8 @@ public class RezeroSerivce:IRezeroSerivce
     [ApiMethod("测试方法")]
     public List<Sys_log> GetTestList(PageModel pageModel)
     {
-        List<Sys_log> list = null;
-        list = list.Where(c => c.Exception =="stake").ToList();
+        int totalCount =0;
+        totalCount = int.Parse("测试");
         return db!.Queryable<Sys_log>().ToPageList(pageModel.PageIndex, pageModel.PageSize);
     }
 }
