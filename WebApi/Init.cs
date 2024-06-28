@@ -65,7 +65,8 @@ public static class Init
         builder.Services.AutoRegistryService();
         //注册SignalR
         builder.Services.AddSignalR();
-
+        //添加SqlSugar服务
+        builder.Services.AddSqlsugarSetup(builder.Configuration);
         //注入Quartz任何工厂及调度工厂
         builder.Services.AddSingleton<IJobFactory, QuartzJobFactory>();
         builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
@@ -98,8 +99,7 @@ public static class Init
         //     api.EnableSuperApi(apiObj);
         //
         // });
-        //添加SqlSugar服务
-        builder.Services.AddSqlsugarSetup(builder.Configuration);
+      
         //添加OpenTelemetry
         const string serviceName = "roll-dice";
         builder.Logging.AddOpenTelemetry(options =>

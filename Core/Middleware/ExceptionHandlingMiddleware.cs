@@ -33,6 +33,7 @@ public class ExceptionHandlingMiddleware
     {
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
         context.Response.ContentType = "application/json";  // 返回json 类型
+        _logger.LogInformation("全局异常捕获");
         _logger.LogError(exception,exception.Message);
         ExceptionReturnModel err = new ExceptionReturnModel();
         err.StatusCode = context.Response.StatusCode;
