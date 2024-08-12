@@ -11,8 +11,8 @@ public class MyTable:IMyTable
     {
         _sugarClient = sugarClient;
     }
-    public List<MyTableModel> GetList(int id)
+    public List<MyTableModel> GetList(string id)
     {
-       return _sugarClient.Queryable<MyTableModel>().Where(c=>c.id==id).ToList();
+       return _sugarClient.Queryable<MyTableModel>().Where(c=>c.Id.ToString()==id).ToList();
     }
 }

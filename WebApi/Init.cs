@@ -1,6 +1,10 @@
 using System.Reflection;
 using System.Runtime.Loader;
+using Application;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Blog.BaseConfigSerivce.DynamicAPi;
+using Core.AutofacExtentions;
 using Core.AutoInjectService;
 using Core.Filter;
 using Core.Middleware;
@@ -27,7 +31,6 @@ public static class Init
 {
     public static void InitializationApplication(string[] args)
     {
-        
         var builder = WebApplication.CreateBuilder(args);
         //构建服务
         BuildServices(builder);
@@ -68,17 +71,17 @@ public static class Init
         //添加SqlSugar服务
         builder.Services.AddSqlsugarSetup(builder.Configuration);
         //注入Quartz任何工厂及调度工厂
-        builder.Services.AddSingleton<IJobFactory, QuartzJobFactory>();
-        builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+         builder.Services.AddSingleton<IJobFactory, QuartzJobFactory>();
+         builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
         //注入调度中心
-        builder.Services.AddSingleton<SchedulerCenter>();
+         builder.Services.AddSingleton<SchedulerCenter>();
         //批量注入任务调度作业类
-        Type[] types = AssemblyHelper.GetTypesByAssembly("Application")
-            .Where(c => c.GetInterfaces().Contains(typeof(IJobBase))).ToArray();
-        foreach (var serviceType in types)
-        {
-            builder.Services.AddSingleton(serviceType);
-        }
+         Type[] types = AssemblyHelper.GetTypesByAssembly("Application")
+             .Where(c => c.GetInterfaces().Contains(typeof(IJobBase))).ToArray();
+         foreach (var serviceType in types)
+         {
+             builder.Services.AddSingleton(serviceType);
+         }
 
         //注册ReZero.Api
         // builder.Services.AddReZeroServices(api =>
@@ -99,7 +102,7 @@ public static class Init
         //     api.EnableSuperApi(apiObj);
         //
         // });
-      
+
         //添加OpenTelemetry
         const string serviceName = "roll-dice";
         builder.Logging.AddOpenTelemetry(options =>
@@ -114,11 +117,15 @@ public static class Init
             .ConfigureResource(resource => resource.AddService(serviceName))
             .WithTracing(tracing => tracing
                 .AddAspNetCoreInstrumentation()
-                .AddConsoleExporter())
+                .AddConsoleExporter()
+                )
             .WithMetrics(metrics => metrics
                 .AddAspNetCoreInstrumentation()
                 .AddConsoleExporter());
-        
+        //注册Autofac
+        // builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+        //     .ConfigureContainer<ContainerBuilder>(
+        //         containerBuilder => { containerBuilder.RegisterModule(new RBACModule()); });
     }
 
     private static void Configure(WebApplication app)
@@ -143,14 +150,14 @@ public static class Init
         app.UseEndpoints(endpoints => { endpoints.MapHub<CommunicationHub>("/communicationHub"); });
         //任务调度
         //获取调度中心实例
-        var quartz = app.Services.GetRequiredService<SchedulerCenter>();
-        app.Lifetime.ApplicationStarted.Register(() =>
-        {
-            quartz.StartScheduler(); //项目启动后启动调度中心
-        });
-        app.Lifetime.ApplicationStopped.Register(() =>
-        {
-            quartz.StopScheduler(); //项目停止后关闭调度中心
-        });
+        // var quartz = app.Services.GetRequiredService<SchedulerCenter>();
+        // app.Lifetime.ApplicationStarted.Register(() =>
+        // {
+        //     quartz.StartScheduler(); //项目启动后启动调度中心
+        // });
+        // app.Lifetime.ApplicationStopped.Register(() =>
+        // {
+        //     quartz.StopScheduler(); //项目停止后关闭调度中心
+        // });
     }
 }
