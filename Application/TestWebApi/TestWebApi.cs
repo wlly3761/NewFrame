@@ -2,6 +2,7 @@ using Core.Attribute;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models;
+using Newtonsoft.Json;
 
 namespace Application.TestWebApi;
 
@@ -13,10 +14,22 @@ public class TestWebApi:ITestWebApi
     {
         _logger = logger;
     }
+    [HttpGet]
     public string GetName()
     {
-        int totalCount =0;
-        totalCount = int.Parse("测试");
         return "测试";
     }
+    [HttpPost]
+    public string GetPostName(test test)
+    {
+        return "成功";
+    }
+    
+}
+
+public class test
+{
+    public string title { get; set; }
+    public string body { get; set; }
+    public string userId { get; set; }
 }

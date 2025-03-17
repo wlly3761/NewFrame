@@ -104,24 +104,24 @@ public static class Init
         // });
 
         //添加OpenTelemetry
-        const string serviceName = "roll-dice";
-        builder.Logging.AddOpenTelemetry(options =>
-        {
-            options
-                .SetResourceBuilder(
-                    ResourceBuilder.CreateDefault()
-                        .AddService(serviceName))
-                .AddConsoleExporter();
-        });
-        builder.Services.AddOpenTelemetry()
-            .ConfigureResource(resource => resource.AddService(serviceName))
-            .WithTracing(tracing => tracing
-                .AddAspNetCoreInstrumentation()
-                .AddConsoleExporter()
-                )
-            .WithMetrics(metrics => metrics
-                .AddAspNetCoreInstrumentation()
-                .AddConsoleExporter());
+        // const string serviceName = "roll-dice";
+        // builder.Logging.AddOpenTelemetry(options =>
+        // {
+        //     options
+        //         .SetResourceBuilder(
+        //             ResourceBuilder.CreateDefault()
+        //                 .AddService(serviceName))
+        //         .AddConsoleExporter();
+        // });
+        // builder.Services.AddOpenTelemetry()
+        //     .ConfigureResource(resource => resource.AddService(serviceName))
+        //     .WithTracing(tracing => tracing
+        //         .AddAspNetCoreInstrumentation()
+        //         .AddConsoleExporter()
+        //         )
+        //     .WithMetrics(metrics => metrics
+        //         .AddAspNetCoreInstrumentation()
+        //         .AddConsoleExporter());
         //注册Autofac
         // builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
         //     .ConfigureContainer<ContainerBuilder>(
