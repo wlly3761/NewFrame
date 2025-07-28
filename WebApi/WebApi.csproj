@@ -10,11 +10,14 @@
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
     <ItemGroup>
+      <Compile Remove="Log\**" />
+      <Content Remove="Log\**" />
+      <EmbeddedResource Remove="Log\**" />
+      <None Remove="Log\**" />
+    </ItemGroup>
+    <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
-      </Content>
-      <Content Update="rezero.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
     <ItemGroup>
@@ -30,9 +33,6 @@
     <ItemGroup>
       <ProjectReference Include="..\Application\Application.csproj" />
       <ProjectReference Include="..\Core\Core.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Log\" />
     </ItemGroup>
     <ItemGroup>
       <None Update="Dockerfile">

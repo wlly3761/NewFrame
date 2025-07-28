@@ -10,3 +10,322 @@
 2025-07-28 10:45:57.7230 Info Validating config: TargetNames=mysql, ConfigItems=39, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
 2025-07-28 10:45:57.7230 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: internalLog
 2025-07-28 10:45:57.7507 Info Configuration initialized.
+2025-07-28 11:06:31.9140 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:06:31.9345 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:06:31.9450 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:06:31.9450 Info Validating config: TargetNames=mysql, ConfigItems=39, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:06:31.9450 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: internalLog
+2025-07-28 11:06:31.9834 Info Configuration initialized.
+2025-07-28 11:06:55.2814 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'exception' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQueryAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+2025-07-28 11:11:27.4304 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:11:27.4304 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:11:27.4526 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:11:27.4526 Info Validating config: TargetNames=mysql, ConfigItems=39, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:11:27.4604 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: internalLog
+2025-07-28 11:11:27.4828 Info Configuration initialized.
+2025-07-28 11:11:37.7541 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'exception' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQueryAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+2025-07-28 11:14:42.5137 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:14:42.5137 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:14:42.5284 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:14:42.5284 Info Validating config: TargetNames=mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:14:42.5284 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: internalLog
+2025-07-28 11:14:42.5595 Info Configuration initialized.
+2025-07-28 11:14:42.7802 Warn Logger: Core.Middleware.ExceptionHandlingMiddleware configured with duplicate output to target: DatabaseTarget(Name=mysql). LoggingRule with NamePattern='*' and Level=Error has been skipped.
+2025-07-28 11:14:58.8196 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'exception' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQueryAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+2025-07-28 11:17:14.5790 Debug Message Template Auto Format enabled
+2025-07-28 11:17:14.5899 Debug Object reflection needed to resolve type: NLog.Targets.DatabaseTarget, NLog.Database
+2025-07-28 11:17:14.6017 Debug Object reflection needed to configure instance of type: NLog.Targets.DatabaseTarget
+2025-07-28 11:17:14.6017 Debug Object reflection needed to create instance of type: NLog.Targets.DatabaseParameterInfo
+2025-07-28 11:17:14.6017 Debug Adding target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:17:14.6017 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:17:14.6017 Debug FileTarget FilePathLayout with FilePathKind.Relative using AppDomain.BaseDirectory: D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\
+2025-07-28 11:17:14.6017 Debug Adding target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:17:14.6164 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:17:14.6164 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:17:14.6164 Debug Start watching file-filter 'NLog.config' in directory: D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0
+2025-07-28 11:17:14.6164 Debug --- NLog configuration dump ---
+2025-07-28 11:17:14.6164 Debug Targets:
+2025-07-28 11:17:14.6164 Debug DatabaseTarget(Name=mysql)
+2025-07-28 11:17:14.6164 Debug FileTarget(Name=internalLog)
+2025-07-28 11:17:14.6164 Debug Rules:
+2025-07-28 11:17:14.6164 Debug logNamePattern: (Core.Middleware.:StartsWith) levels: [ Error Fatal ] writeTo: [ mysql ]
+2025-07-28 11:17:14.6164 Debug logNamePattern: (Application.:StartsWith) levels: [ Error Fatal ] writeTo: [ mysql ]
+2025-07-28 11:17:14.6164 Debug logNamePattern: (:All) levels: [ Error Fatal ] writeTo: [ mysql ]
+2025-07-28 11:17:14.6164 Debug --- End of NLog configuration dump ---
+2025-07-28 11:17:14.6326 Info Validating config: TargetNames=mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:17:14.6326 Debug Unused target checking is started... Rule Count: 3, Target Count: 2
+2025-07-28 11:17:14.6326 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: internalLog
+2025-07-28 11:17:14.6326 Debug Unused target checking is completed. Total Rule Count: 3, Total Target Count: 2, Unused Target Count: 1
+2025-07-28 11:17:14.6588 Info Configuration initialized.
+2025-07-28 11:17:14.6700 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => mysql
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => mysql
+2025-07-28 11:17:14.6700 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => mysql
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => mysql
+2025-07-28 11:17:14.6700 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.Hosting.Lifetime
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.Hosting.Lifetime [Error] => mysql
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => mysql
+2025-07-28 11:17:14.6700 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Quic
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Quic [Error] => mysql
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Quic [Fatal] => mysql
+2025-07-28 11:17:14.6700 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => mysql
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => mysql
+2025-07-28 11:17:14.6700 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => mysql
+2025-07-28 11:17:14.6700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => mysql
+2025-07-28 11:17:14.6836 Debug Targets configured when LogLevel >= Error for Logger: WebApi
+2025-07-28 11:17:14.6836 Debug Logger WebApi [Error] => mysql
+2025-07-28 11:17:14.6836 Debug Logger WebApi [Fatal] => mysql
+2025-07-28 11:17:14.7139 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2025-07-28 11:17:14.7139 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => mysql
+2025-07-28 11:17:14.7139 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => mysql
+2025-07-28 11:17:14.7359 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.Core.Filters.AntiforgeryMiddlewareAuthorizationFilter
+2025-07-28 11:17:14.7359 Debug Logger Microsoft.AspNetCore.Mvc.Core.Filters.AntiforgeryMiddlewareAuthorizationFilter [Error] => mysql
+2025-07-28 11:17:14.7359 Debug Logger Microsoft.AspNetCore.Mvc.Core.Filters.AntiforgeryMiddlewareAuthorizationFilter [Fatal] => mysql
+2025-07-28 11:17:14.7359 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.ApplicationModels.CompiledPageRouteModelProvider
+2025-07-28 11:17:14.7359 Debug Logger Microsoft.AspNetCore.Mvc.ApplicationModels.CompiledPageRouteModelProvider [Error] => mysql
+2025-07-28 11:17:14.7359 Debug Logger Microsoft.AspNetCore.Mvc.ApplicationModels.CompiledPageRouteModelProvider [Fatal] => mysql
+2025-07-28 11:17:14.7359 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler
+2025-07-28 11:17:14.7359 Debug Logger Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler [Error] => mysql
+2025-07-28 11:17:14.7359 Debug Logger Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.TypeForwardingActivator
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Error] => mysql
+2025-07-28 11:17:14.7459 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Fatal] => mysql
+2025-07-28 11:17:14.7459 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider [Fatal] => mysql
+2025-07-28 11:17:14.7566 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker [Error] => mysql
+2025-07-28 11:17:14.7566 Debug Logger Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionManager [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionContext [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.Http.Connections.Internal.HttpConnectionDispatcher [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.Internal.DefaultHubProtocolResolver [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.SignalR.HubConnectionHandler
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.HubConnectionHandler [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.HubConnectionHandler [Fatal] => mysql
+2025-07-28 11:17:14.8364 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher [Error] => mysql
+2025-07-28 11:17:14.8364 Debug Logger Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher [Fatal] => mysql
+2025-07-28 11:17:14.8513 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.WebSockets.WebSocketMiddleware
+2025-07-28 11:17:14.8513 Debug Logger Microsoft.AspNetCore.WebSockets.WebSocketMiddleware [Error] => mysql
+2025-07-28 11:17:14.8513 Debug Logger Microsoft.AspNetCore.WebSockets.WebSocketMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.8513 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService
+2025-07-28 11:17:14.8513 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Error] => mysql
+2025-07-28 11:17:14.8513 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Fatal] => mysql
+2025-07-28 11:17:14.8513 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2025-07-28 11:17:14.8513 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => mysql
+2025-07-28 11:17:14.8513 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => mysql
+2025-07-28 11:17:14.8832 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor
+2025-07-28 11:17:14.8832 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Error] => mysql
+2025-07-28 11:17:14.8832 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Fatal] => mysql
+2025-07-28 11:17:14.9116 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2025-07-28 11:17:14.9116 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => mysql
+2025-07-28 11:17:14.9116 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9245 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2025-07-28 11:17:14.9245 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => mysql
+2025-07-28 11:17:14.9245 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9367 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsService
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Error] => mysql
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Fatal] => mysql
+2025-07-28 11:17:14.9367 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Error] => mysql
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9367 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => mysql
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9367 Warn Logger: Core.Middleware.ExceptionHandlingMiddleware configured with duplicate output to target: DatabaseTarget(Name=mysql). LoggingRule with NamePattern='*' and Level=Error has been skipped.
+2025-07-28 11:17:14.9367 Debug Targets configured when LogLevel >= Error for Logger: Core.Middleware.ExceptionHandlingMiddleware
+2025-07-28 11:17:14.9367 Debug Logger Core.Middleware.ExceptionHandlingMiddleware [Error] => mysql
+2025-07-28 11:17:14.9367 Debug Logger Core.Middleware.ExceptionHandlingMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9367 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Error] => mysql
+2025-07-28 11:17:14.9367 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9489 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2025-07-28 11:17:14.9489 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => mysql
+2025-07-28 11:17:14.9489 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9489 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2025-07-28 11:17:14.9489 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => mysql
+2025-07-28 11:17:14.9489 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9489 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2025-07-28 11:17:14.9489 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Error] => mysql
+2025-07-28 11:17:14.9489 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Fatal] => mysql
+2025-07-28 11:17:14.9779 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2025-07-28 11:17:14.9779 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => mysql
+2025-07-28 11:17:14.9779 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => mysql
+2025-07-28 11:17:17.3839 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2025-07-28 11:17:17.3839 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => mysql
+2025-07-28 11:17:17.3839 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => mysql
+2025-07-28 11:17:17.3839 Debug Targets configured when LogLevel >= Error for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2025-07-28 11:17:17.3839 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Error] => mysql
+2025-07-28 11:17:17.3839 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Fatal] => mysql
+2025-07-28 11:17:17.9388 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'exception' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQueryAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+2025-07-28 11:19:08.3201 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:19:08.3201 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:19:08.3422 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:19:08.3422 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=41, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:19:08.3714 Info Configuration initialized.
+2025-07-28 11:19:08.5718 Warn Logger: Core.Middleware.ExceptionHandlingMiddleware configured with duplicate output to target: DatabaseTarget(Name=mysql). LoggingRule with NamePattern='*' and Level=Error has been skipped.
+2025-07-28 11:20:58.4600 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'exception' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQueryAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+2025-07-28 11:22:55.2734 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:22:55.2734 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:22:55.2887 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:22:55.2887 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:22:55.3224 Info Configuration initialized.
+2025-07-28 11:23:05.7463 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'exception' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.GetResultAsync(Int32 affectedRow, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.GetResultAsync(Int32 statementId, Int32 affectedRows, Int64 insertedId, Boolean execAsync)
+   at MySql.Data.MySqlClient.Driver.NextResultAsync(Int32 statementId, Boolean force, Boolean execAsync)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResultAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQueryAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+2025-07-28 11:24:55.7923 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 11:24:55.7923 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 11:24:55.8128 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 11:24:55.8128 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 11:24:55.8438 Info Configuration initialized.
