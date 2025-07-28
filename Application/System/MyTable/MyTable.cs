@@ -1,3 +1,4 @@
+using Application.Helper;
 using Core.Attribute;
 using Repository.Model;
 using SqlSugar;
@@ -7,13 +8,16 @@ namespace Application.System.MyTable;
 public class MyTable : IMyTable
 {
     private readonly ISqlSugarClient _sugarClient;
-    public MyTable(ISqlSugarClient sugarClient)
+    private readonly RedisHelper _redisHelper;
+    public MyTable(ISqlSugarClient sugarClient, RedisHelper redisHelper)
     {
         _sugarClient = sugarClient;
+        _redisHelper = redisHelper;
     }
-    public List<MyTableModel> GetList(string id)
+    public async Task<List<MyTableModel>> GetList(string id)
     {
-        int a = Convert.ToInt32("²ÞËù");
-        return _sugarClient.Queryable<MyTableModel>().Where(c => c.Id.ToString() == id).ToList();
+        var data = await _redisHelper.SetStringAsync("mytable", "chat");
+        var value = await _redisHelper.GetStringAsync("mytable");
+        return await _sugarClient.Queryable<MyTableModel>().Where(c => c.Id.ToString() == id).ToListAsync();
     }
 }

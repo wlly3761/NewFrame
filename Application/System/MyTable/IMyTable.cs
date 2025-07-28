@@ -4,5 +4,5 @@ namespace Application.System.MyTable;
 
 public interface IMyTable
 {
-     List<MyTableModel> GetList(string id);
+     Task<List<MyTableModel>> GetList(string id);
 }

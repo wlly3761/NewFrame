@@ -329,3 +329,28 @@
 2025-07-28 11:24:55.8128 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
 2025-07-28 11:24:55.8128 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
 2025-07-28 11:24:55.8438 Info Configuration initialized.
+2025-07-28 12:07:48.2819 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 12:07:48.2819 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 12:07:48.3194 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 12:07:48.3194 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 12:07:48.3462 Info Configuration initialized.
+2025-07-28 12:14:36.9022 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 12:14:36.9156 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 12:14:36.9156 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 12:14:36.9302 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 12:14:36.9481 Info Configuration initialized.
+2025-07-28 12:15:24.0743 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 12:15:24.0885 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 12:15:24.0885 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 12:15:24.1042 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 12:15:24.1248 Info Configuration initialized.
+2025-07-28 12:16:37.4986 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 12:16:37.4986 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 12:16:37.5129 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 12:16:37.5129 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 12:16:37.5246 Info Configuration initialized.
+2025-07-28 12:18:20.1828 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2025-07-28 12:18:20.1828 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2025-07-28 12:18:20.1966 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2025-07-28 12:18:20.1966 Info Validating config: TargetNames=internalLog, mysql, ConfigItems=40, FilePath=D:\01_项目\SelfProject\NewFrame\WebApi\bin\Debug\net8.0\NLog.config
+2025-07-28 12:18:20.2238 Info Configuration initialized.

@@ -1,9 +1,11 @@
+using Application.Helper;
 using Autofac;
 using Blog.BaseConfigSerivce.DynamicAPi;
 using Core.AutoInjectService;
 using Core.Filter;
 using Core.Middleware;
 using Core.Quartz;
+using Core.Redis;
 using Core.SignalR;
 using Core.SqlSugar;
 using Core.Swagger;
@@ -59,17 +61,20 @@ public static class Init
         //添加SqlSugar服务
         builder.Services.AddSqlsugarSetup(builder.Configuration);
         //注入Quartz任何工厂及调度工厂
-         builder.Services.AddSingleton<IJobFactory, QuartzJobFactory>();
-         builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+        builder.Services.AddSingleton<IJobFactory, QuartzJobFactory>();
+        builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
         //注入调度中心
-         builder.Services.AddSingleton<SchedulerCenter>();
+        builder.Services.AddSingleton<SchedulerCenter>();
         //批量注入任务调度作业类
-         Type[] types = AssemblyHelper.GetTypesByAssembly("Application")
-             .Where(c => c.GetInterfaces().Contains(typeof(IJobBase))).ToArray();
-         foreach (var serviceType in types)
-         {
-             builder.Services.AddSingleton(serviceType);
-         }
+        Type[] types = AssemblyHelper.GetTypesByAssembly("Application")
+            .Where(c => c.GetInterfaces().Contains(typeof(IJobBase))).ToArray();
+        foreach (var serviceType in types)
+        {
+            builder.Services.AddSingleton(serviceType);
+        }
+        //配置redis
+        builder.Services.AddRedisSetup(builder.Configuration);
+        builder.Services.AddSingleton<RedisHelper>();
 
         //注册ReZero.Api
         // builder.Services.AddReZeroServices(api =>
