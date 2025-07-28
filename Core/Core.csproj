@@ -9,7 +9,6 @@
     <ItemGroup>
       <PackageReference Include="Autofac" Version="8.0.0" />
       <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
-      <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
       <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="8.0.0" />
       <PackageReference Include="Quartz" Version="3.8.1" />
       <PackageReference Include="SqlSugar.IOC" Version="2.0.0" />

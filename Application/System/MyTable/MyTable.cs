@@ -4,7 +4,7 @@ using SqlSugar;
 
 namespace Application.System.MyTable;
 [DynamicApi]
-public class MyTable:IMyTable
+public class MyTable : IMyTable
 {
     private readonly ISqlSugarClient _sugarClient;
     public MyTable(ISqlSugarClient sugarClient)
@@ -13,6 +13,7 @@ public class MyTable:IMyTable
     }
     public List<MyTableModel> GetList(string id)
     {
-       return _sugarClient.Queryable<MyTableModel>().Where(c=>c.Id.ToString()==id).ToList();
+        int a = Convert.ToInt32("²ÞËù");
+        return _sugarClient.Queryable<MyTableModel>().Where(c => c.Id.ToString() == id).ToList();
     }
 }

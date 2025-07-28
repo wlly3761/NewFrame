@@ -7,11 +7,6 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
-      <PackageReference Include="Rezero.Api" Version="1.7.6" />
-    </ItemGroup>
-
 
     <ItemGroup>
       <ProjectReference Include="..\Core\Core.csproj" />

@@ -1,10 +1,5 @@
-using System.Reflection;
-using System.Runtime.Loader;
-using Application;
 using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using Blog.BaseConfigSerivce.DynamicAPi;
-using Core.AutofacExtentions;
 using Core.AutoInjectService;
 using Core.Filter;
 using Core.Middleware;
@@ -13,17 +8,10 @@ using Core.SignalR;
 using Core.SqlSugar;
 using Core.Swagger;
 using Core.Tools;
-using NLog;
 using NLog.Web;
-using OpenTelemetry.Logs;
-using OpenTelemetry.Metrics;
-using OpenTelemetry.Resources;
-using OpenTelemetry.Trace;
 using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
-using ReZero;
-using ReZero.SuperAPI;
 
 namespace WebApi;
 

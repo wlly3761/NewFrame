@@ -1,5 +1,9 @@
-bin/
-obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+/Core/bin
+/Core/obj
+/Application/bin
+/Application/obj
+/Repository/bin
+/Repository/obj
+/WebApi/bin
+/WebApi/obj
+*.vs
